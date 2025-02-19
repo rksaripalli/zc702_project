@@ -1,0 +1,51 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+
+&{/axi/spi@e000d000/flash@0} {
+	compatible = "micron,n25q128a11";
+};
+
+&axi_iic_temp_sensor {
+	status = "okay";
+};
+
+&axi_iic_temp_sensor2 {
+	status = "okay";
+};
+
+&axi_iic_temp_sensor3 {
+	status = "okay";
+};
+
+&axi_iic_temp_sensor4 {
+	status = "okay";
+};
+
+&axi_iic_fan_ctrl {
+	status = "okay";
+};
+
+&axi_iic_si_osc {
+	status = "okay";
+};
+
+&i2c0 {
+    status = "okay";
+    ipmb@10 {
+        compatible = "ipmb-dev";
+        reg = <0x10>;  // Slave address for this IPMB interface
+        i2c-protocol;
+        bmc-addr = <0x20>;  // BMC's own IPMB address
+    };
+};
+
+&i2c1 {
+    status = "okay";
+    ipmb@10 {  // IPMB-A
+        compatible = "ipmb-dev";
+        reg = <0x10>;  // Slave address for this IPMB interface
+        i2c-protocol;
+        bmc-addr = <0x20>;  // BMC's own IPMB address
+    };
+};
