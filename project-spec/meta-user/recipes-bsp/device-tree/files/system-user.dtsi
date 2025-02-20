@@ -32,6 +32,7 @@
 
 &i2c0 {
     status = "okay";
+    clock-frequency = <100000>;
     ipmb@10 {
         compatible = "ipmb-dev";
         reg = <0x10>;  // Slave address for this IPMB interface
@@ -42,6 +43,7 @@
 
 &i2c1 {
     status = "okay";
+    clock-frequency = <100000>;
     ipmb@10 {  // IPMB-A
         compatible = "ipmb-dev";
         reg = <0x10>;  // Slave address for this IPMB interface
