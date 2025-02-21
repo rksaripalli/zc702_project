@@ -35,7 +35,6 @@
     clock-frequency = <100000>;
     ipmb@10 {
         compatible = "ipmb-dev";
-        reg = <0x10>;  // Slave address for this IPMB interface
         i2c-protocol;
         bmc-addr = <0x20>;  // BMC's own IPMB address
     };
@@ -46,7 +45,6 @@
     clock-frequency = <100000>;
     ipmb@10 {  // IPMB-A
         compatible = "ipmb-dev";
-        reg = <0x10>;  // Slave address for this IPMB interface
         i2c-protocol;
         bmc-addr = <0x20>;  // BMC's own IPMB address
     };
